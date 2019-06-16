@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date对象</title>
+</head>
+<body>
+<script type="text/javascript">
+//定义时间（即初始化时间）
+ var mydate=new Date();
+ document.write("当前时间："+mydate+"<br>");
+//月份的取得
+ var myyear=mydate.getFullYear();
+ document.write("当前年份："+myyear+"<br>");
+ //星期的取得
+   //为保证取得值为相应的“星期几”模式，先定义一组星期组
+ var weekday=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+   //取得实际星期所得的数（0-6）
+ var myweek=mydate.getDay();
+   //将得到的数，代入数组
+ document.write("当前星期："+weekday[myweek]+"<br>");
+ //设置时间-推迟一个小时
+ mydate.setTime(mydate.getTime()+60*60*1000);
+ document.write("推迟一小时为："+mydate);
+ 
+</script>
+</body>
+</html>

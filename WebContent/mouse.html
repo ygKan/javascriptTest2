@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouseover onmouseout事件</title>
+<script type="text/javascript">
+ function message(){
+	 alert("请先输入密码，再确定：");
+ }
+ function message2(){
+	 alert("真的要离开吗？");
+ }
+</script>
+</head>
+<body>
+<form>
+  密码：<input type="password" name="password" >
+  <button name="确定" value="确定" onmouseover="message()">确定</button>
+  </br>
+  </br>
+  <a href="https://www.iqiyi.com/v_19rrn5h8bw.html" onmouseout="message2()">CLICK-MOVIE</a>
+</form>
+
+</body>
+</html>

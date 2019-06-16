@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>switch</title>
+<script type="text/javaScript">
+  function week(){
+    var myweek=parseInt(prompt("请输入今日是周几：输入阿拉伯数字"));
+    //parseInt()将字符串转为int
+    switch(myweek)
+     {
+       case 1:
+       case 2:
+       document.write("学习理念知识");
+       break;
+       case 3:
+       case 4:
+       document.write("到企业实践");
+       break;
+       case 5:
+       document.write("总结经验");
+       break;
+       default:
+       document.write("周六、日休息和娱乐");
+     }
+  }
+</script>
+</head>
+<body>
+ <button onclick="week()">CLICK</button>
+</body>
+</html>

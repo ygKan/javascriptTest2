@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XXXX年XX月X日 星期X--班级总分:</title>
+<!-- 
+1、显示打印的日期。 格式为类似“XXXX年XX月XX日 星期X” 的当前的时间。
+
+2、计算出该班级的平均分（保留整数）。
+
+ -->
+<script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var date =new Date();
+ // document.write(date+"<br>");
+  var week=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+  var myweek=week[date.getDay()];     //星期
+  var myYear=date.getFullYear();      //年
+  var myMonth=date.getMonth()+1;      //月
+  var myday=date.getDate();           //日
+  document.write(myYear+"年"+myMonth+"月"+myday+"日"+myweek+"<br>");
+ 
+  //成绩是一长窜的字符串
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+  //使用split方法分割字符串为数组
+  var score=scoreStr.split(";");
+  var sum=0;   //定义总成绩
+  //for循环遍历出总分数
+  for(var i=0;i<score.length;i++){
+    sum+=parseInt(score[i].substring(3,5));     
+  }
+//从数组中将成绩撮出来，然后求和取整，并输出。
+  //平均分（四舍五入取整数值）
+  var average=Math.round((sum/score.length));
+  document.write(average);
+  
+</script>
+</head>
+<body>
+
+</body>
+</html>
